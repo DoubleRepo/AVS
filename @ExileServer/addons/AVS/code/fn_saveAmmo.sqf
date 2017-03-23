@@ -34,5 +34,5 @@ if (_vehicleID > -1) then
 	_extDB2Message = ["setVehicleAmmo", [_currentLoadout, _vehicleID]] call ExileServer_util_extDB2_createMessage;
 
 	_query = format["%1:%2:%3", 1, "AVSDB", _extDB2Message];
-	"extDB2" callExtension _query;
+	"extDB3" callExtension _query;
 };

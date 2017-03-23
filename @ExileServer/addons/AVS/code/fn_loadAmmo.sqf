@@ -28,7 +28,7 @@ if (!_OK) exitWith
 _vehicleID = _vehicle getVariable["ExileDatabaseID", 0];
 
 _query = format["%1:%2:%3", 0, "AVSDB", format ["getVehicleAmmo:%1", _vehicleID]];
-_result = call compile ("extDB2" callExtension _query);
+_result = call compile ("extDB3" callExtension _query);
 _data = (_result select 1) select 0;
 _savedMagazines = _data select 0;
 
