@@ -156,7 +156,7 @@ if (hasInterface) then
 			} 
 			else 							// AVS_RefuelDistance for ground vehicles
 			{
-				AVS_RefuelDist = AVS_RefuelDistance;
+				AVS_RefuelDist = 15;
 				AVS_AirVehicle = false;
 			};
 
