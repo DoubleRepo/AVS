@@ -19,6 +19,7 @@ diag_log format ["AVS - Loading AVS version: %1", AVS_Version];
 
 AVS_configuration = compileFinal (preprocessFileLineNumbers "AVS\AVS_configuration.sqf");
 AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getConfigLoadout.sqf");
+AVS_fnc_sanitizegastation = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_sanitizegastation.sqf");
 
 call AVS_configuration;
 
@@ -92,7 +93,8 @@ if (!_worldFound) exitWith
 	['ExileServer_object_vehicle_database_update', 'exile_server\code\ExileServer_object_vehicle_database_update.sqf', 'AVS\hooks\AVS_vehicle_database_update.sqf'],
 	['ExileServer_object_vehicle_database_load', 'exile_server\code\ExileServer_object_vehicle_database_load.sqf', 'AVS\hooks\AVS_vehicle_database_load.sqf'],
 	['ExileServer_system_database_connect', 'exile_server\code\ExileServer_system_database_connect.sqf', 'AVS\hooks\AVS_system_database_connect.sqf'],
-	['ExileServer_world_initialize', 'exile_server\code\ExileServer_world_initialize.sqf', 'AVS\hooks\AVS_world_initialize.sqf']
+	['ExileServer_world_initialize', 'exile_server\code\ExileServer_world_initialize.sqf', 'AVS\hooks\AVS_world_initialize.sqf'],
+	['ExileServer_object_vehicle_carefulCreateVehicle', 'exile_server\code\ExileServer_object_vehicle_carefulCreateVehicle.sqf', 'AVS\hooks\AVS_CarefulCreateVehicle.sqf']
 
 ];
 
